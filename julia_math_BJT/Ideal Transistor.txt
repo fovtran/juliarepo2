@@ -1,0 +1,37 @@
+Ideal Transistor
+The basic solid state amplification devices are bipolar, JFET and MOSFET transistors.  
+All of them can be considered as transconductance device, which is a current source controlled by a voltage.
+
+A bipolar transistor has a diode input structure: 
+    the input voltage between the base and the emitter sees a 
+    small signal resistance of VT/Ib, where VT=kT/q is the thermal voltage, about 26mV at the room temperature 
+    and the Ib is the base bias current, usually in the 10μA range, 
+    so the resistance rb is about 2.6KΩ.   
+    A voltage vbe, that generates ib=vbe/rb, 
+    would cause a collector-emitter current ic=βib=βvbe/rb; 
+    so the transconductance is gm=β/rb. 
+    With β around 100, the transductance is about 40mA/V. 
+    Another way to look at it is an ideal transistor with re=1/gm at its emitter. 
+    An ideal transistor is to have an infinite transconductance, 
+    which implies that vbe approaches zero.
+
+    Let's use this model for the three basic amplifier configurations.  
+    The gain of the common-emitter amplifier with emitter degeneration, −RC/(re+RE). 
+    re is about 25Ω, which is generally much less than RE, 
+    so the gain simplifies to −RC/RE, independent of the transistor parameters.  
+    For the common-collection amplifier or the follower, 
+    the gain is a simple voltage divider, RE/(re+RE)=1/(1+re/RE)≈1.  
+    For the common-base amplifier, the gain is re/RC.
+
+Now we have raised the concept of an ideal transistor, let's be more clear.  
+The transconductance is infinite.  
+Because we have been using the small-signal model, 
+which is a linearized model around the bias point, we have ignored the biasing.  
+An ideal transistor would require no biasing, no input current into the base  
+and the emitter current is bi-directional, flowing both in and out the emitter.   
+Such an ideal transistor has been approximated by an integrated circuit that 
+is called an operational transconductance amplifier (OTA) or a diamond transistor.   
+One example is Burr-Brown (TI)'s OPA860.  
+It has a high impedance input as the base and a bi-directional emitter and requires no bias.  
+The transconductance is adjustable, but is around 100 mA/V or equivalently re=10Ω.  
+So the transconductance gain is not quite infinite, but re is small enough compared to RE.
